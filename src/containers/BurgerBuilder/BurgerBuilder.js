@@ -28,7 +28,7 @@ class BurgerBuilder extends Component {
             cheese: 0,
             meat: 0
         },
-        totalPrice: 1,
+        totalPrice: 5,
         purchasable: false,
         purchasing: false,
         loading: false,
