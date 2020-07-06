@@ -123,6 +123,7 @@ class BurgerBuilder extends Component {
             queryParams.push(encodeURIComponent(i)+'='+encodeURIComponent(this.state.ingredients[i]))
         }
         const queryString = queryParams.join('&');
+        console.log("this is query r",queryString)
         this.props.history.push({
             pathname:'/checkout',
             search: '?'+queryString
