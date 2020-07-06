@@ -4,7 +4,7 @@ import Button from '../../UI/Button/Button'
 
 class OrderSummary extends Component{
     componentWillUpdate(nextProps, nextState, nextContext) {
-        console.log('[OderSummary.js] componentWillUpdate ')
+        // console.log('[OderSummary.js] componentWillUpdate ')
     }
 
     render(){
