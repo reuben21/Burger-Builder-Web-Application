@@ -5,7 +5,7 @@ import ContactData from "./ContactData/ContactData";
 class Checkout extends Component {
     state = {
         ingredients: 0,
-        price:0
+            price:0
 
     }
     componentWillMount() {
