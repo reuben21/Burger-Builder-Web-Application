@@ -14,10 +14,15 @@
     margin-left: 10px;
     padding-left: 10px;
 }
+.Button:disabled{
+    color: #7E7365;
+
+}
 
 .Success {
     border: 1px solid green;
     color: #5C9210;
+    cursor:not-allowed;
 }
 
 .Danger {
