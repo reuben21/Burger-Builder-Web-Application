@@ -19,7 +19,8 @@ class ContactData extends Component {
                 value: '',
                 validation: {
                     required: true
-                }, valid:false
+                }, valid:false,
+                touched: false
             },
             street: {
                 elementType: 'input',
@@ -30,7 +31,8 @@ class ContactData extends Component {
                 value: '',
                 validation: {
                     required: true
-                }, valid:false
+                }, valid:false,
+                touched: false
             },
             zipCode: {
                 elementType: 'input',
@@ -43,7 +45,8 @@ class ContactData extends Component {
                     required: true,
                     minLength: 6,
                     maxLength: 6,
-                }, valid:false
+                }, valid:false,
+                touched: false
             },
             country: {
                 elementType: 'input',
@@ -54,7 +57,8 @@ class ContactData extends Component {
                 value: '',
                 validation: {
                     required: true
-                }, valid:false
+                }, valid:false,
+                touched: false
             },
             email: {
                 elementType: 'input',
@@ -65,7 +69,8 @@ class ContactData extends Component {
                 value: '',
                 validation: {
                     required: true
-                }, valid:false
+                }, valid:false,
+                touched: false
             },
             deliveryMethod: {
                 elementType: 'select',
@@ -78,9 +83,11 @@ class ContactData extends Component {
                 value: '',
                 validation: {
                     required: true
-                }, valid:false
+                }, valid:true,
+               
             }
         },
+        formIsValid:false,
         loading: false
     }
 
@@ -136,9 +143,16 @@ class ContactData extends Component {
         // console.log("From inputIdentifier ",inputIdentifier)
         updatedFormElement.value = event.target.value;
         updatedFormElement.valid = this.checkValidity(updatedFormElement.value,updatedFormElement.validation)
+        updatedFormElement.touched = true;
         updatedOrderForm[inputIdentifier] = updatedFormElement;
-        console.log(updatedFormElement )
-        this.setState({orderForm: updatedOrderForm});
+
+        let formIsValid = true;
+        for (let inputIdentifiers in updatedOrderForm){
+            formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
+        }
+        console.log(formIsValid)
+
+        this.setState({orderForm: updatedOrderForm,formIsValid:formIsValid});
     }
 
     render() {
@@ -158,9 +172,11 @@ class ContactData extends Component {
                         elementConfig={formElement.config.elementConfig}
                         value={formElement.config.value}
                         invalid={!formElement.config.valid}
+                        shouldValidate={formElement.config.validation}
+                        touched={formElement.config.touched}
                         changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
                 ))}
-                <Button btnType="Success">ORDER</Button>
+                <Button disabled={!this.state.formIsValid}btnType="Success">ORDER</Button>
             </form>
         );
         if (this.state.loading) {
