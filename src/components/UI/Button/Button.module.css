@@ -15,7 +15,8 @@
     padding-left: 10px;
 }
 .Button:disabled{
-    color: #7E7365;
+    background-color: grey;
+    color: white;
 
 }
 
