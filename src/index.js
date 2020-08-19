@@ -5,11 +5,32 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
-import reducer from './store/reducer';
-import {createStore} from 'redux';
-const store = createStore(reducer);
+import burgerBuilderRed from './store/reducers/BurgerBuilder';
+import { createStore,applyMiddleware,compose,combineReducers
 
+} from 'redux';
+import orderReducer from './store/reducers/order'
+import thunk from "redux-thunk";
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+// const logger = store => {
+//     return next => {
+//         return action => {
+//             console.log("Middleware Dispactching",action);
+//             const result = next(action);
+//             console.log("[Middleware] next state",store.getState())
+//             return result;
+//         }
+//     }
+// }
+
+const rootReducer = combineReducers({
+    burgerBuilder:burgerBuilderRed,
+    order:orderReducer
+})
+const store = createStore(rootReducer,composeEnhancers(
+    applyMiddleware(thunk)
+));
 const app=(
     <Provider store={store} >
         <BrowserRouter><App/></BrowserRouter>
