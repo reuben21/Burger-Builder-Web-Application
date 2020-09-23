@@ -7,7 +7,10 @@
     padding: 10px;
     box-sizing: border-box;
 }
-
+ .heading {
+     color: #7f3608;
+     font-size: 40px;
+ }
 @media (min-width: 600px) {
     .Auth {
         width: 500px;

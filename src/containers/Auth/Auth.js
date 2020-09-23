@@ -3,8 +3,10 @@ import Input from '../../components/UI/Input/Input'
 import Button from '../../components/UI/Button/Button'
 import classes from './Auth.module.css'
 import * as actions from '../../store/actions/index';
-import {connect} from 'react-redux'
-import Spinner from '../../components/UI/Spinner/Spinner'
+import {connect} from 'react-redux';
+import Spinner from '../../components/UI/Spinner/Spinner';
+import {Redirect} from 'react-router-dom'
+
 class Auth extends Component{
     state={
         controls:{
@@ -128,8 +130,15 @@ class Auth extends Component{
             );
         }
 
+        let authRedirect = null;
+        if (this.props.isAuthenticated){
+            authRedirect = <Redirect to="/"></Redirect>
+        }
+
         return(<div className={classes.Auth}>
             {errorMessage}
+            {authRedirect}
+            <h2> Sign In Or Sign Up</h2>
             <form onSubmit={this.submitHandler}>
                 {form}
                 <Button btnType="Success">SUBMIT</Button>
@@ -144,7 +153,8 @@ class Auth extends Component{
 const mapStateToProps = state => {
     return {
         loading: state.auth.loading,
-        error: state.auth.error
+        error: state.auth.error,
+        isAuthenticated:state.auth.token
     };
 };
 const mapDispatchToProps = dispatch => {
