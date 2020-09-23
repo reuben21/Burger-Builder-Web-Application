@@ -11,28 +11,18 @@ import { createStore,applyMiddleware,compose,combineReducers
 } from 'redux';
 import orderReducer from './store/reducers/order'
 import thunk from "redux-thunk";
-import authreducer from './store/reducers/auth'
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+import authreducer from './store/reducers/auth';
 
-// const logger = store => {
-//     return next => {
-//         return action => {
-//             console.log("Middleware Dispactching",action);
-//             const result = next(action);
-//             console.log("[Middleware] next state",store.getState())
-//             return result;
-//         }
-//     }
-// }
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
     burgerBuilder:burgerBuilderRed,
     order:orderReducer,
     auth:authreducer
 })
-const store = createStore(rootReducer,composeEnhancers(
-    applyMiddleware(thunk)
-));
+const store = createStore(rootReducer,composeEnhancers(applyMiddleware(thunk)));
+
 const app=(
     <Provider store={store} >
         <BrowserRouter><App/></BrowserRouter>
