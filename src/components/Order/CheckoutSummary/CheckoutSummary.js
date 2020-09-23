@@ -10,7 +10,8 @@ const checkoutSummary = (props) =>{
             <div style={{
                 width:'300px',
                 height:'300px',
-                margin:'auto'
+                marginTop:'100px',
+                marginBottom:"100px"
             }}>
                 <Burger ingredients={props.ingredients} />
 
