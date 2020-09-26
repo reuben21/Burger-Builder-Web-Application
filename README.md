@@ -1,7 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## A desktop View of The Web Application
-<img src="https://github.com/reuben21/Burger-Builder-Web-Application-using-React-JS/blob/master/src/components/Assets/Images/DesktopView.JPG"/>
-
+<img src="https://m17kfg.dm.files.1drv.com/y4mlkfo5rhXip9qw8TfQjrWmOrc0Lru0hb4zt8w1KHFkScbpeKsJltQo0LcFrcC0umNjhDkThq-QW37XuUxx4JFavPJrcB7xqrNV_tHRVKx0vNRZgvVyV2RPtBNXXNEKvREC6m92uJj27lvhTtam_ksf6OmHUspzxfnQfkjBlSinxEBrJITFodMi7Ce0k4QjQsFgnmImwuwECoYr_jRQy9hSw?width=1675&height=890&cropmode=none" width="1675" height="890" />
 ## A Mobile View of The Web Application
 
 <img src="https://github.com/reuben21/Burger-Builder-Web-Application-using-React-JS/blob/master/src/components/Assets/Images/MobileView.JPG"/>
