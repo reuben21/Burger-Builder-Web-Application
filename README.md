@@ -1,9 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## A desktop View of The Web Application
 <img src="https://cvws.icloud-content.com/B/AazSWnYikTcMWwldIFSD_w1-Q3YKAbfGqkyxOkECe9uNAIPM6Qw_btH3/Burger+Builder+Home+Page.png?o=AhIV7Z2FWBreiTFuueULBILVD2ciFPCdJ6cD9kCdvPQZ&v=1&x=3&a=CAogr9i5E2w5E_CkoZvAprNR7BcUwRZUR9oL57ZoW0Thxh4SbxDSi-LIzC4Y8oKZycwuIgEAUgR-Q3YKWgQ_btH3aifYoDkN7RFHXW88WsdHnC5TylmsyFU6wq0GnJDcimY4Q2F7w-gHm_JyJ9dgSKfbXu0DA9pueejFd8GunNysdB8ReJULBuxLLJ6oJLKh0X0jKA&e=1601102561&fl=&r=4b6a7f8a-e085-46b8-a0bd-f64421214bcd-1&k=_rj_2A1j-oTO8BD3UBnikA&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=46&s=coYi2-mY6NpnxFpKKuc3HOn4t8U&cd=i" width="1000" height="600" />
+
+
 ## A Mobile View of The Web Application
 
-<img src="https://github.com/reuben21/Burger-Builder-Web-Application-using-React-JS/blob/master/src/components/Assets/Images/MobileView.JPG"/>
+<img src="https://cvws.icloud-content.com/B/Ad1fqNFbHhL6G95KVphSxjsX84UfAUa9_cGBAL4ZFSTnfDSWoKnTdVuP/Screenshot+2020-09-26+at+12.01.56+PM.png?o=As87WD--Jr89r1ua0tTuZApEJKXusa_IzEwuq1Jv-W3c&v=1&x=3&a=CAogzunNtDBK6ltlHRo8hw8jB4RV3kK71UavrVX0NohbB7sSbxDp6vbIzC4YieKtycwuIgEAUgQX84UfWgTTdVuPaideqjiU8gEffaKH4stTnkyMtH5q40feHeiB4e_5bj4DiyzEqHNusk1yJ4_CdoljlWjIGH9pvpRyFFeokdllJGXVKf8yK6kLTn47KHUgVvAZ6Q&e=1601102901&fl=&r=054275af-62be-4aef-b011-b45da1b12122-1&k=FM5nGOfg5PgE5is6ZnO4nQ&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=46&s=g9uB8p0i8f3RJl_-54eBU3tkYsQ&cd=i"/>
 
 ## Available Scripts
 
